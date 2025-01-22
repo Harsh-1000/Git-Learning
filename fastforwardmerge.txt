@@ -1,0 +1,45 @@
+// Fast-forward merge
+
+main : 
+head - main
+commit - ab71633b3813461889c08ee0a689673484770207  (parent - branch5)
+
+branch5:
+head - branch5
+commit - 63c58764a1a94e6b58eabf024c9ba2862b0c9f46
+
+git checkout main 
+head - main 
+commit - ab71633b3813461889c08ee0a689673484770207 
+
+git merge branch5
+
+main:
+head- main,branch5
+commit - 63c58764a1a94e6b58eabf024c9ba2862b0c9f46 
+
+  
+
+------------------------------
+
+// Fast-forward merge OFF
+
+main : 
+head - main
+commit - x  (parent - branch5)
+
+branch5:
+head - branch5
+commit - y
+
+git checkout main 
+head - main 
+commit - x 
+
+git merge branch5
+
+main:
+head- main,branch5
+commit - z
+
+
